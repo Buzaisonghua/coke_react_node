@@ -1,0 +1,13 @@
+@import '~antd/dist/antd.css';
+html,
+body,
+#root{
+    height: 100%;
+}
+
+
+/* 强制修改ant中的样式 */
+/* input框获取焦点出现阴影 */
+.ant-input:focus{
+    box-shadow: none;
+}

@@ -1,0 +1,127 @@
+$mdWid: 25%;
+$xsWid: 210px;
+
+.layout{
+    height: 100%;
+} 
+.layout_header{
+    height: 64px;
+    box-shadow: 0 2px 8px #f0f1f2;
+}
+.layout_main_box{
+    height: calc(100% - 64px);
+    display: flex;
+    position: relative;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+.layout_nav{
+    width: 25%;
+    height: 100%;
+    background: #FFF;
+    transition: all 600ms ease;
+}
+.layout_main{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin navWid($width) {
+    .layout_nav{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: $width;
+        z-index: 99
+    }
+    .layout_main{
+        width: 100%;
+    }
+    .close_nav{
+        transform: translateX(-100%);
+        transition: all 600ms ease;
+    }
+    .open_nav{
+        z-index: 9;
+        transform: translateX(0);
+        transition: all 600ms ease;
+    }
+    .open_share{
+        position: fixed;
+        background-color: rgba(0,0,0,.2);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .change_nav{
+        position: absolute;
+        top: 72px;
+        width: 41px;
+        height: 40px;
+        right: -40px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 2px 0 8px rgba(0,0,0,.15);
+        border-radius: 0 4px 4px 0;
+    }
+    .nav_close_svg{
+        display: inline-block;
+        width: 14px;
+        height: 2px;
+        background-color: #333;
+        position: relative;
+        &::before, &::after{
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+        }
+        &::before{
+            top: -5px;
+        }
+        &::after{
+            bottom: -5px;
+        }
+    }
+    .nav_open_svg{
+        width: 14px;
+        height: 2px;
+        &::before, &::after{
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 2px;
+            background-color: #333;
+            position: absolute;
+        }
+        &::before{
+            transform: rotate(45deg);
+        }
+        &::after{
+            transform: rotate(-45deg);
+        }
+    }
+    .open_shade{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: red;
+    }
+}
+
+@media only screen and ( min-width: 768px) and (max-width: 992px) {
+    @include navWid($mdWid)
+}
+@media only screen and (max-width: 768px) {
+    @include navWid($xsWid)
+}
+

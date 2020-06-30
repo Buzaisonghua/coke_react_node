@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
+import './index.css'
+import './normalize.css'
+import MainRouter from '@src/router/router.js'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <div>1</div>
-  </React.StrictMode>,
+  <MainRouter />,
   document.getElementById('root')
 );
 

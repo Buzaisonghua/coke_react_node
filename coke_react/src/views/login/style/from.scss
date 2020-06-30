@@ -1,0 +1,104 @@
+.login_form{
+    position: relative;
+    width: 520px;
+    padding: 30px 35px ;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.form_name{
+    font-size: 26px;
+    color: #eee;
+    margin: 0px auto 40px auto;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.login_form_input{
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    color: #454545;
+    height: 48px!important;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 24px;
+}
+.form_svg{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px 0 16px;
+}
+.form_input{
+    display: inline-block;
+    height: 100%;
+    width: 85%;
+    border: 0 none;
+    color: #ccc;
+    background-color: transparent;
+}
+.ant-input::placeholder{
+    color:#ccc;
+}
+.ant-col,
+.ant-form-item-control-input,
+.ant-form-item-control-input-content,
+.ant-form-item-has-error{
+    height: 100%;
+    display: flex;
+}
+.show_pwd{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6px 0 16px;
+}
+.err_input{
+    position: absolute;
+    left: 0;
+    color: #ff4949;
+    font-size: 12px;
+    height: 24px;
+    bottom: -24px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.login_form_button{
+    margin: 10px 0 24px;
+    width: 100%;
+    height: 36px;
+}
+.login_register{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.login_register_rigth{
+    width: 150px;
+}
+.login_register_left{
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+.login_register_left_top:nth-child(2){
+    margin-top: 8px;
+}
+@media only screen and (max-width: 470px) {
+    .login_register_rigth {
+      display: none;
+    }
+    .login_register{
+        justify-content: center;
+    }
+    .login_form{
+        width: 100%;
+    }
+}

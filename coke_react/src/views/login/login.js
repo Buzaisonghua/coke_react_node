@@ -32,6 +32,6 @@ export default class Login extends React.Component {
     }
     _getUser = (e = {username: 'admin', id: 1}) => {
         localStorage.users = e
-        this.props.history.push('/layout')
+        this.props.history.push('/layout/home')
     }
 }

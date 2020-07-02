@@ -28,9 +28,12 @@ export default class HeaderMain extends React.Component {
                     lg={18}
                     xl={19}
                     xxl={20}>
-                        haha
+                        <span onClick={() => this._unLogin()} className={styles.header_users_unlogin}>退出登录</span>
                 </Col>
             </Row>
         )
+    }
+    _unLogin () {
+        this.props._unLogin()
     }
 }

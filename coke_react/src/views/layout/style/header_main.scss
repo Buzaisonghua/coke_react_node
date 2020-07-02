@@ -28,10 +28,19 @@
     width: 32px;
 }
 .header_users{
-    // background-color: blue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-@media only screen and (max-width: 768px) {
-    .header_logo::after{
+.header_users_unlogin{
+    cursor: pointer;
+    margin-right: 40px;
+    &:hover{
+        color: rgb(24, 144, 255);
+    }
+}
+@media only screen and (max-width: 992px) {
+    .header_logo::after, .header_users{
         display: none;
     }
 }

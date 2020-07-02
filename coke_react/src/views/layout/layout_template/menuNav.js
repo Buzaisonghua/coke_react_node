@@ -1,28 +1,22 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import styles from '../style/menu_nav.scss'
 
 export default class MenuNav extends React.Component {
     constructor (props) {
         super(props)
-        this.state = {
-            item: this.props.item
-        }
+        this.state = {}
     }
     render () {
-        const { item } = this.state
-        console.log(item)
+        const {
+            item,
+            navKey
+        } = this.props
         return (
-            <div className={styles.menu_nav}>
-                {
-                    item.hasOwnProperty('children') ? 
-                        item.children.map((item, index) => {
-                            // <MenuNav key={index} item={item}/>
-                        })
-                    : 
-                        <div>{JSON.stringify(item)}</div>
-                }
-            </div>
+            <Link to={ item.path } className={[`${styles.nav_menu}`, `${navKey ? styles.tem_nav : ''}`].join(' ')}>
+                { item.name }
+                <span className={styles.nav_title}>{ item.title }</span>
+            </Link>
         )
     }
 }

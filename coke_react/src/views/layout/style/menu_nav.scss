@@ -1,0 +1,19 @@
+.nav_menu{
+    height: 40px;
+    margin: 4px 0;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    &:hover{
+        color: rgb(24, 144, 255);
+    }
+}
+.tem_nav{
+    background-color: rgb(230, 247, 255);
+    color: rgb(24, 144, 255);
+    border-right: 3px solid rgb(24, 144, 255);
+}
+.nav_title{
+    margin-left: 6px;
+    opacity: .67;
+}
